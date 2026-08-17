@@ -228,7 +228,60 @@
     opacity:0;
     animation: fadeUp 600ms 1400ms ease forwards;
   }
+/* portfolio access button */
+.portfolio-link{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 
+  margin-top: 28px;
+  padding: 12px 22px;
+
+  border: 1px solid var(--amber);
+  border-radius: 6px;
+
+  background: rgba(227,165,72,0.04);
+  color: var(--amber);
+
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+
+  transition:
+    background 220ms ease,
+    color 220ms ease,
+    box-shadow 220ms ease,
+    transform 220ms ease;
+
+  opacity: 0;
+  animation: fadeUp 600ms 1350ms ease forwards;
+}
+
+.portfolio-link:hover{
+  background: var(--amber);
+  color: #0a0c10;
+  box-shadow:
+    0 0 18px rgba(227,165,72,0.25),
+    0 0 35px rgba(227,165,72,0.08);
+
+  transform: translateY(-2px);
+}
+
+.portfolio-link:active{
+  transform: translateY(0);
+}
+
+.portfolio-arrow{
+  font-size: 14px;
+  transition: transform 220ms ease;
+}
+
+.portfolio-link:hover .portfolio-arrow{
+  transform: translateX(4px);
+}
   @media (max-width: 480px){
     .console{ padding: 44px 26px 32px; }
     .row{ font-size: 11.5px; }
@@ -282,7 +335,17 @@
         <span class="label">DATA</span>
         <span class="value"><span class="dot green"></span>SECURED &amp; RETAINED</span>
       </div>
-    </div>
+        </div>
+
+    <a
+      href="https://your-portfolio-website.com"
+      class="portfolio-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      VISIT PORTFOLIO
+      <span class="portfolio-arrow">→</span>
+    </a>
 
     <p class="footer">SEAL-ID · 0X4F19 — NO ACTION REQUIRED</p>
   </main>
